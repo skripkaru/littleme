@@ -1,0 +1,248 @@
+@media (max-width: 768px) {
+
+
+   .btn {
+      max-width: 200px;
+      font-size: 14px;
+   }
+
+   .title {
+
+      &_small {
+         font-size: 24px;
+      }
+   }
+
+   .header {
+      padding: 10px 0 30px;
+      // min-height: 350px;
+      min-height: 50vh;
+
+      &__content {
+         // min-height: 280px;
+         min-height: 40vh;
+      }
+
+      &__title {
+         font-size: 16px;
+
+         span {
+            font-size: 30px;
+         }
+      }
+
+      &__descr {
+         margin: 0 0 20px;
+         font-size: 12px;
+      }
+   }
+
+   .logo {
+      max-width: 30%;
+   }
+
+   .menu {
+
+      &__list {
+         position: fixed;
+         top: 0;
+         right: -100%;
+         width: 50%;
+         height: 100%;
+         padding: 0;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         background-color: $accent;
+         transition: all .3s ease;
+         z-index: 10;
+
+         &.active {
+            right: 0;
+         }
+      }
+
+      &__list-item {
+         margin: 0 0 20px;
+
+         &:last-child {
+            margin: 0;
+         }
+      }
+
+   }
+
+   .menu-icon {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: url(../svg/menu.svg) center / contain no-repeat;
+      cursor: pointer;
+      z-index: 15;
+
+      &.active {
+         background: url(../svg/menu-close.svg) center / contain no-repeat;
+         z-index: 25;
+      }
+   }
+
+
+   .about {
+      padding: 60px 0 20px;
+
+      &__img {
+         margin: 0 0 30px;
+
+         &::before {
+            // display: none;
+            left: 12px;
+            width: 90%;
+         }
+      }
+   }
+
+
+   .skills {
+      padding: 15px 0;
+
+      &__inner {
+         padding: 20px 15px;
+      }
+
+      &__text {
+         span {
+            padding-left: 30px;
+            margin: 0 0 10px;
+            font-size: 12px;
+
+            &::before {
+               top: -10px;
+               width: 29px;
+               height: 29px;
+               background-size: contain;
+            }
+         }
+      }
+   }
+
+   .services {
+      padding: 30px 0;
+
+      .col-md-6 {
+         &:first-of-type {
+            .services__item {
+               margin: 0 0 50px;
+            }
+         }
+      }
+
+      &__item {
+         padding: 15px;
+      }
+
+      &__item-title {
+
+         &:first-of-type {
+            margin: 0 0 10px;
+         }
+      }
+
+      &__item-text {
+         margin: 0 0 15px;
+
+         span {
+            font-size: 14px;
+         }
+      }
+
+      &__item-time {
+         font-size: 14px;
+      }
+
+      &__item-price {
+         margin: 0 0 10px;
+         font-size: 14px;
+
+         span {
+            font-size: 18px;
+         }
+      }
+   }
+
+   .request {
+      padding: 30px 0;
+
+      .btn {
+         padding: 12px 30px;
+         max-width: 100%;
+      }
+
+
+      &__item {
+         min-height: auto;
+         max-width: 270px;
+         margin: 0 auto;
+         padding: 20px 10px;
+         border-radius: 30px 30px 0 0;
+      }
+
+      &__item-title {
+         font-size: 24px;
+         text-align: center;
+      }
+
+      &__form {
+         margin-top: -20px;
+         padding: 20px 35px 35px;
+      }
+
+      &__form-title {
+         margin: 0 0 23px;
+         font-size: 18px;
+      }
+
+      &__form-input {
+         padding: 12px;
+         font-size: 14px;
+
+         &::placeholder {
+            font-size: 14px;
+         }
+
+         &:last-of-type {
+            margin: 0 0 24px;
+         }
+      }
+   }
+
+   .contacts {
+      padding: 5px 0 30px;
+
+      .col-md-6 {
+         &:last-of-type {
+            order: -1;
+         }
+      }
+
+      &__inner {
+         margin: 0 0 20px;
+         padding: 0;
+      }
+
+      &__address {
+         margin: 0 0 10px;
+         text-align: center;
+      }
+
+      &__link {
+         margin: 0 0 10px;
+         text-align: center;
+      }
+
+   }
+
+}

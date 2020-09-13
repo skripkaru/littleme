@@ -1,0 +1,88 @@
+// Variables
+
+$fontsize: 16px;
+$textcolor: #000;
+$accent: #2D378A;
+$white: #fff;
+
+// Fonts
+
+@mixin font($fname, $fstyle, $fweight, $furl) {
+	@font-face {
+		font-family: $fname;
+		font-style: $fstyle;
+		font-weight: $fweight;
+		font-display: swap;
+		src: local($fname), url($furl) format('woff2');
+	}
+}
+
+@include font('JakobExtraCTT', normal, 400, '../fonts/JakobExtraCTT-Regular.woff2');
+@include font('Sansation', normal, 400, '../fonts/SansationRegular.woff2');
+@include font('Sansation', normal, 300, '../fonts/SansationLight.woff2');
+
+$jacob: 'JakobExtraCTT', Arial, sans-serif;
+$sansation: 'Sansation', Arial, sans-serif;
+
+// Bootstrap
+@import "../../node_modules/bootstrap/scss/bootstrap-grid.scss";
+
+html {
+	box-sizing: border-box;
+	overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	position: relative;
+	min-width: 320px;
+	font-family: $sansation;
+	font-size: $fontsize;
+	font-weight: normal;
+	color: $textcolor;
+	line-height: 1.5;
+	overflow-x: hidden;
+}
+
+a {
+	display: inline-block;
+	text-decoration: none;
+	color: inherit;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+button {
+	display: inline-block;
+	padding: 0;
+	color: inherit;
+	border: 0;
+	outline: none;
+	background-color: transparent;
+	cursor: pointer;
+	transition: all .5s ease;
+}
+
+input, textarea {
+	outline: none;
+	&:focus:required:invalid { border-color: red }
+	&:required:valid { border-color: green }
+}
+
+::placeholder {
+	color: #666;
+}
+
+::selection {
+	background-color: $accent;
+	color: #fff;
+}
